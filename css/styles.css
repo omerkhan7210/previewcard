@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.perfume {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px hsl(33, 22%, 82%);
+  flex-basis: 55%;
+  justify-content: space-around;
+}
+.left-side {
+  height: 100%;
+  display: flex;
+  border-top-left-radius: 10px;
+  flex-basis: 50%;
+  border-bottom-left-radius: 10px;
+}
+.left-side img {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.right-side {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  flex-basis: 50%;
+  padding: 10px 30px 5px 20px;
+}
+.right-side .heading {
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 7px;
+}
+.right-side p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 25px;
+  color: gray;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 1px 15px lightgrey;
+}
+.right-side .title {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 40px;
+  color: hsl(212, 21%, 14%);
+  line-height: 38px;
+}
+.price {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 40px;
+  position: relative;
+}
+
+.price::after {
+  content: "$169.99";
+  position: absolute;
+  height: 100%;
+  top: 30%;
+  right: 10%;
+  font-size: 16px;
+  color: gray;
+  text-decoration: line-through;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  flex-basis: 70%;
+  padding: 17px 70px;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+button i {
+  padding-right: 10px;
+}
+button:hover {
+  background-color: hsl(158, 50%, 24%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    height: unset;
+  }
+  .perfume {
+    flex-direction: column;
+    flex-basis: 100%;
+    margin: 20px;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .left-side img {
+    height: 300px;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .right-side {
+    flex-basis: 70%;
+    padding: 30px 0;
+  }
+}
